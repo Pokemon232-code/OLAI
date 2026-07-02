@@ -1,0 +1,379 @@
+{
+  "version": "1.0.0",
+  "description": "OLAI Core Module Registry - Pre-written modular components",
+  "modules": {
+    "hardware": {
+      "camera_controller": {
+        "path": "hardware/camera_controller.py",
+        "description": "Advanced camera controller with unlimited capabilities",
+        "dependencies": ["opencv-python", "numpy"],
+        "api": {
+          "initialize": "Initialize camera with unlimited configuration",
+          "start_recording": "Start unlimited duration recording",
+          "start_monitoring": "Start AI-powered monitoring",
+          "start_streaming": "Start real-time streaming",
+          "capture_frame": "Capture high-quality frame",
+          "detect_motion": "AI motion detection",
+          "detect_faces": "AI face detection",
+          "detect_objects": "AI object detection"
+        }
+      },
+      "microphone_controller": {
+        "path": "hardware/microphone_controller.py", 
+        "description": "Advanced microphone controller with unlimited capabilities",
+        "dependencies": ["pyaudio", "numpy"],
+        "api": {
+          "initialize": "Initialize microphone with unlimited configuration",
+          "start_recording": "Start unlimited duration recording",
+          "start_streaming": "Start real-time audio streaming",
+          "process_audio": "Advanced audio processing",
+          "voice_activity_detection": "AI voice activity detection",
+          "noise_cancellation": "AI noise cancellation"
+        }
+      },
+      "gpu_manager": {
+        "path": "hardware/gpu_manager.py",
+        "description": "GPU management and optimization",
+        "dependencies": ["torch", "nvidia-ml-py3"],
+        "api": {
+          "initialize": "Initialize GPU management",
+          "get_gpu_info": "Get comprehensive GPU information",
+          "optimize_for_ai": "Optimize GPU for AI workloads",
+          "monitor_usage": "Real-time GPU monitoring"
+        }
+      },
+      "system_sensors": {
+        "path": "hardware/system_sensors.py",
+        "description": "Comprehensive system sensor monitoring",
+        "dependencies": ["psutil", "GPUtil"],
+        "api": {
+          "initialize": "Initialize system sensors",
+          "get_system_info": "Get comprehensive system information",
+          "monitor_performance": "Real-time performance monitoring",
+          "get_hardware_specs": "Get detailed hardware specifications"
+        }
+      }
+    },
+    "microservices": {
+      "auth_service": {
+        "path": "microservices/auth_service.py",
+        "description": "Advanced authentication service with unlimited capabilities",
+        "dependencies": ["jwt", "bcrypt", "sqlite3"],
+        "api": {
+          "initialize": "Initialize auth service with unlimited configuration",
+          "register_user": "Register unlimited users",
+          "authenticate": "Flexible authentication",
+          "create_session": "Create unlimited sessions",
+          "oauth_integration": "OAuth provider integration",
+          "multi_factor_auth": "Multi-factor authentication"
+        }
+      },
+      "model_discovery": {
+        "path": "microservices/model_discovery.py",
+        "description": "Advanced model discovery and management",
+        "dependencies": ["requests", "transformers"],
+        "api": {
+          "discover_models": "Discover models from multiple platforms",
+          "download_models": "Download and install models",
+          "optimize_models": "Optimize models for system",
+          "manage_models": "Manage model lifecycle"
+        }
+      },
+      "model_orchestrator": {
+        "path": "microservices/model_orchestrator.py",
+        "description": "Advanced model orchestration and chaining",
+        "dependencies": ["torch", "transformers"],
+        "api": {
+          "initialize": "Initialize model orchestration",
+          "chain_models": "Chain multiple models",
+          "optimize_pipeline": "Optimize model pipeline",
+          "monitor_performance": "Monitor model performance"
+        }
+      }
+    },
+    "ai": {
+      "gemini_client": {
+        "path": "ai/gemini_client.py",
+        "description": "Gemini API integration",
+        "dependencies": ["google-generativeai"],
+        "api": {
+          "generate_text": "Generate text using Gemini",
+          "analyze_image": "Analyze images",
+          "chat_completion": "Chat completion"
+        }
+      },
+      "huggingface_client": {
+        "path": "ai/huggingface_client.py",
+        "description": "HuggingFace model integration",
+        "dependencies": ["transformers", "torch"],
+        "api": {
+          "load_model": "Load HuggingFace model",
+          "run_inference": "Run model inference",
+          "download_model": "Download model from HuggingFace"
+        }
+      },
+      "vision_processor": {
+        "path": "ai/vision_processor.py",
+        "description": "Computer vision processing",
+        "dependencies": ["opencv-python", "pillow", "numpy"],
+        "api": {
+          "detect_objects": "Object detection",
+          "analyze_pose": "Pose analysis",
+          "process_image": "Image processing"
+        }
+      },
+      "nlp_processor": {
+        "path": "ai/nlp_processor.py",
+        "description": "Natural language processing",
+        "dependencies": ["transformers", "nltk"],
+        "api": {
+          "analyze_sentiment": "Sentiment analysis",
+          "extract_entities": "Entity extraction",
+          "summarize_text": "Text summarization"
+        }
+      },
+      "ocr_processor": {
+        "path": "ai/ocr_processor.py",
+        "description": "Advanced OCR text extraction from images",
+        "dependencies": ["pytesseract", "easyocr", "opencv-python"],
+        "api": {
+          "extract_text": "Extract text from images",
+          "extract_text_from_file": "Extract text from image files",
+          "batch_extract_text": "Extract text from multiple images",
+          "preprocess_image": "Preprocess images for better OCR"
+        }
+      },
+      "speech_to_text": {
+        "path": "ai/speech_to_text.py",
+        "description": "Advanced speech-to-text conversion",
+        "dependencies": ["whisper", "speech_recognition", "librosa"],
+        "api": {
+          "transcribe": "Transcribe audio to text",
+          "transcribe_from_file": "Transcribe audio files",
+          "real_time_transcribe": "Real-time transcription",
+          "batch_transcribe": "Transcribe multiple audio files"
+        }
+      }
+    },
+    "frontend": {
+      "react_base": {
+        "path": "frontend/react_base",
+        "description": "React base application with common components",
+        "dependencies": ["react", "react-dom", "tailwindcss"],
+        "components": {
+          "Dashboard": "Main dashboard component",
+          "ChatInterface": "Chat interface component",
+          "DataTable": "Data table component",
+          "Charts": "Chart components"
+        }
+      },
+      "workflow_canvas": {
+        "path": "frontend/workflow_canvas",
+        "description": "N8N-style workflow canvas",
+        "dependencies": ["reactflow", "react"],
+        "components": {
+          "WorkflowCanvas": "Main canvas component",
+          "NodePalette": "Node palette sidebar",
+          "NodeEditor": "Node configuration editor"
+        }
+      }
+    },
+    "api": {
+      "rest_api_manager": {
+        "path": "api/rest_api_manager.py",
+        "description": "Comprehensive REST API endpoints manager",
+        "dependencies": ["fastapi", "uvicorn", "pydantic"],
+        "api": {
+          "start_server": "Start API server",
+          "setup_routes": "Setup API routes",
+          "handle_request": "Handle API requests",
+          "broadcast_message": "Broadcast WebSocket messages"
+        }
+      }
+    },
+    "communication": {
+      "websocket_manager": {
+        "path": "communication/websocket_manager.py",
+        "description": "Real-time WebSocket communication manager",
+        "dependencies": ["fastapi", "websockets"],
+        "api": {
+          "connect": "Accept WebSocket connection",
+          "disconnect": "Disconnect WebSocket",
+          "send_message": "Send message to client",
+          "broadcast_message": "Broadcast message to all clients",
+          "join_room": "Join client to room",
+          "leave_room": "Leave client from room"
+        }
+      }
+    },
+    "storage": {
+      "file_manager": {
+        "path": "storage/file_manager.py",
+        "description": "Advanced file management system",
+        "dependencies": ["aiofiles", "PIL", "python-magic"],
+        "api": {
+          "upload_file": "Upload and process file",
+          "get_file": "Get file information",
+          "delete_file": "Delete file",
+          "list_files": "List files with filtering",
+          "search_files": "Search files by query"
+        }
+      }
+    },
+    "config": {
+      "configuration_manager": {
+        "path": "config/configuration_manager.py",
+        "description": "Dynamic configuration system",
+        "dependencies": ["pyyaml", "toml"],
+        "api": {
+          "get_config": "Get configuration value",
+          "set_config": "Set configuration value",
+          "delete_config": "Delete configuration",
+          "load_config_from_file": "Load configuration from file",
+          "save_config_to_file": "Save configuration to file",
+          "validate_config": "Validate configuration"
+        }
+      }
+    },
+    "database": {
+      "database_manager": {
+        "path": "database/database_manager.py",
+        "description": "Advanced database operations manager",
+        "dependencies": ["sqlite3", "psycopg2", "pymongo", "redis"],
+        "api": {
+          "initialize": "Initialize database connections",
+          "create_user": "Create new user",
+          "create_project": "Create new project",
+          "create_workflow": "Create new workflow",
+          "get_user": "Get user by ID/username/email",
+          "get_projects": "Get all projects",
+          "cache_set": "Set cache value",
+          "cache_get": "Get cache value"
+        }
+      }
+    },
+    "workflow": {
+      "node_types": {
+        "camera_trigger": {
+          "path": "workflow/nodes/camera_trigger.py",
+          "description": "Camera trigger node",
+          "inputs": [],
+          "outputs": ["frame"],
+          "config": ["interval", "resolution", "camera_index"]
+        },
+        "image_analyzer": {
+          "path": "workflow/nodes/image_analyzer.py",
+          "description": "Image analysis node",
+          "inputs": ["image"],
+          "outputs": ["analysis", "objects", "pose"],
+          "config": ["model_id", "confidence_threshold"]
+        },
+        "ai_processor": {
+          "path": "workflow/nodes/ai_processor.py",
+          "description": "AI processing node",
+          "inputs": ["text", "image"],
+          "outputs": ["result", "confidence"],
+          "config": ["model_id", "prompt_template"]
+        },
+        "alert_dispatcher": {
+          "path": "workflow/nodes/alert_dispatcher.py",
+          "description": "Alert dispatching node",
+          "inputs": ["alert_data"],
+          "outputs": ["notification_sent"],
+          "config": ["channels", "escalation_policy"]
+        },
+        "database_writer": {
+          "path": "workflow/nodes/database_writer.py",
+          "description": "Database writing node",
+          "inputs": ["data"],
+          "outputs": ["record_id"],
+          "config": ["table_name", "schema"]
+        },
+        "api_integration": {
+          "path": "workflow/nodes/api_integration.py",
+          "description": "API integration node",
+          "inputs": ["request_data"],
+          "outputs": ["response_data"],
+          "config": ["endpoint", "method", "headers"]
+        },
+        "text_processor": {
+          "path": "workflow/nodes/text_processor.py",
+          "description": "Advanced text processing node",
+          "inputs": ["text"],
+          "outputs": ["processed_text"],
+          "config": ["processor_type", "task", "prompt"]
+        },
+        "ocr_processor": {
+          "path": "workflow/nodes/ocr_processor.py",
+          "description": "OCR text extraction node",
+          "inputs": ["image"],
+          "outputs": ["extracted_text"],
+          "config": ["engine", "languages"]
+        },
+        "speech_to_text": {
+          "path": "workflow/nodes/speech_to_text.py",
+          "description": "Speech-to-text conversion node",
+          "inputs": ["audio"],
+          "outputs": ["transcribed_text"],
+          "config": ["engine", "language"]
+        }
+      }
+    }
+  },
+  "templates": {
+    "todo_app": {
+      "description": "AI-powered todo list with image support",
+      "modules": [
+        "backend.fastapi_server",
+        "backend.database_manager", 
+        "backend.auth_service",
+        "ai.gemini_client",
+        "ai.vision_processor",
+        "frontend.react_base",
+        "workflow.node_types.camera_trigger",
+        "workflow.node_types.image_analyzer",
+        "workflow.node_types.ai_processor",
+        "workflow.node_types.database_writer"
+      ],
+      "workflow": {
+        "nodes": [
+          {"type": "camera_trigger", "id": "camera_input"},
+          {"type": "image_analyzer", "id": "analyze_images"},
+          {"type": "ai_processor", "id": "process_todos"},
+          {"type": "database_writer", "id": "save_todos"}
+        ],
+        "edges": [
+          {"from": "camera_input", "to": "analyze_images"},
+          {"from": "analyze_images", "to": "process_todos"},
+          {"from": "process_todos", "to": "save_todos"}
+        ]
+      }
+    },
+    "health_monitoring": {
+      "description": "Health monitoring system for post-operative patients",
+      "modules": [
+        "hardware.camera",
+        "hardware.sensors",
+        "backend.fastapi_server",
+        "backend.websocket_manager",
+        "ai.vision_processor",
+        "ai.nlp_processor",
+        "frontend.react_base",
+        "workflow.node_types.camera_trigger",
+        "workflow.node_types.image_analyzer",
+        "workflow.node_types.alert_dispatcher"
+      ],
+      "workflow": {
+        "nodes": [
+          {"type": "camera_trigger", "id": "monitor_camera"},
+          {"type": "image_analyzer", "id": "analyze_behavior"},
+          {"type": "alert_dispatcher", "id": "send_alerts"}
+        ],
+        "edges": [
+          {"from": "monitor_camera", "to": "analyze_behavior"},
+          {"from": "analyze_behavior", "to": "send_alerts"}
+        ]
+      }
+    }
+  }
+}

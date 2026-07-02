@@ -1,0 +1,38 @@
+{
+  "id": "triggers.gmail-trigger",
+  "name": "Gmail Trigger",
+  "category": "Tools",
+  "icon": "📬",
+  "description": "Automatically trigger a workflow when a new email arrives in Gmail.",
+  "inputs": [],
+  "outputs": [
+    { "name": "email", "type": "any", "description": "The received email data" }
+  ],
+  "settings": [
+    {
+      "key": "gmailAccount",
+      "label": "Gmail Account",
+      "type": "text",
+      "default": "default",
+      "placeholder": "e.g. myemail@gmail.com",
+      "description": "The Gmail account to monitor (uses default authenticated account)."
+    },
+    {
+      "key": "searchQuery",
+      "label": "Search Filter",
+      "type": "text",
+      "default": "",
+      "placeholder": "e.g. from:john subject:invoice",
+      "description": "Gmail search query to filter which emails trigger the workflow."
+    },
+    {
+      "key": "pollingInterval",
+      "label": "Polling Interval (seconds)",
+      "type": "number",
+      "default": 10,
+      "min": 5,
+      "max": 300,
+      "description": "How often to check for new emails."
+    }
+  ]
+}

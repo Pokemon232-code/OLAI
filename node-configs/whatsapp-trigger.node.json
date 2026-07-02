@@ -1,0 +1,39 @@
+{
+  "id": "triggers.whatsapp-trigger",
+  "name": "WhatsApp Trigger",
+  "category": "Tools",
+  "icon": "📲",
+  "description": "Automatically trigger a workflow when a WhatsApp message is received.",
+  "inputs": [],
+  "outputs": [
+    { "name": "message", "type": "any", "description": "The received WhatsApp message data" }
+  ],
+  "settings": [
+    {
+      "key": "triggerContact",
+      "label": "Monitor Contact / Number",
+      "type": "text",
+      "default": "",
+      "placeholder": "e.g. OLAI Bot or +911232343451",
+      "description": "The WhatsApp contact or number to monitor for new messages."
+    },
+    {
+      "key": "pollingInterval",
+      "label": "Polling Interval (seconds)",
+      "type": "number",
+      "default": 5,
+      "min": 3,
+      "max": 60,
+      "description": "How often to check for new messages."
+    },
+    {
+      "key": "messageLimit",
+      "label": "Message Fetch Limit",
+      "type": "number",
+      "default": 1,
+      "min": 1,
+      "max": 20,
+      "description": "Number of recent messages to fetch per check."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "triggers.webhook-trigger",
+  "name": "Webhook Trigger",
+  "category": "Tools",
+  "icon": "🔗",
+  "description": "Trigger a workflow when an external HTTP POST request is received.",
+  "inputs": [],
+  "outputs": [
+    { "name": "payload", "type": "any", "description": "The incoming webhook payload" }
+  ],
+  "settings": [
+    {
+      "key": "endpointId",
+      "label": "Endpoint ID",
+      "type": "text",
+      "default": "",
+      "placeholder": "Auto-generated unique ID",
+      "description": "Unique ID for your webhook URL. Leave empty to auto-generate."
+    },
+    {
+      "key": "secretKey",
+      "label": "Secret Key (optional)",
+      "type": "text",
+      "default": "",
+      "placeholder": "e.g. my-secret-key-123",
+      "description": "Optional secret for validating incoming requests (sent as x-webhook-secret header)."
+    }
+  ]
+}

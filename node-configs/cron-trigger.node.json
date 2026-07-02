@@ -1,0 +1,41 @@
+{
+  "id": "triggers.cron-trigger",
+  "name": "Cron Trigger",
+  "category": "Tools",
+  "icon": "⏰",
+  "description": "Automatically trigger a workflow on a time-based schedule.",
+  "inputs": [],
+  "outputs": [
+    { "name": "event", "type": "any", "description": "Trigger event with timestamp" }
+  ],
+  "settings": [
+    {
+      "key": "scheduleType",
+      "label": "Schedule Type",
+      "type": "select",
+      "default": "interval",
+      "options": [
+        { "label": "Every X Minutes", "value": "interval" },
+        { "label": "Cron Expression", "value": "cron" }
+      ],
+      "description": "Choose a simple interval or advanced cron expression."
+    },
+    {
+      "key": "intervalMinutes",
+      "label": "Interval (minutes)",
+      "type": "number",
+      "default": 5,
+      "min": 1,
+      "max": 1440,
+      "description": "Run every X minutes (for interval mode)."
+    },
+    {
+      "key": "cronExpression",
+      "label": "Cron Expression",
+      "type": "text",
+      "default": "*/5 * * * *",
+      "placeholder": "e.g. 0 9 * * 1-5 (weekdays at 9am)",
+      "description": "Standard cron expression (for cron mode)."
+    }
+  ]
+}
