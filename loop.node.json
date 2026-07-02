@@ -1,0 +1,87 @@
+{
+  "id": "processing.loop",
+  "name": "Loop",
+  "category": "Processing",
+  "icon": "🔄",
+  "description": "Iterate over CSV rows, text segments, or a fixed count. Foundation for complex automation logic.",
+  "inputs": [
+    {
+      "name": "input",
+      "type": "any",
+      "description": "Data to loop over (CSV array, text, or none for count)"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "item",
+      "type": "any",
+      "description": "Current iteration data (row, word, or number)"
+    },
+    {
+      "name": "index",
+      "type": "number",
+      "description": "Current iteration index (1-based)"
+    },
+    {
+      "name": "total",
+      "type": "number",
+      "description": "Total number of iterations"
+    }
+  ],
+  "settings": [
+    {
+      "key": "loopType",
+      "label": "Loop Type",
+      "type": "select",
+      "options": [
+        { "label": "CSV / List (Each Item)", "value": "list" },
+        { "label": "Text (Split into segments)", "value": "text" },
+        { "label": "Counter (Run N times)", "value": "count" },
+        { "label": "Indices (Range e.g. 1-10, 15)", "value": "indices" },
+        { "label": "JSON Array (Auto-parse)", "value": "json" },
+        { "label": "Files (Iterate attachments)", "value": "files" }
+      ],
+      "default": "list"
+    },
+    {
+      "key": "indicesConfig",
+      "label": "Indices / Ranges",
+      "type": "text",
+      "default": "",
+      "description": "e.g. 1-5, 8, 10-12"
+    },
+    {
+      "key": "jsonPath",
+      "label": "JSON Array Path (Optional)",
+      "type": "text",
+      "default": "",
+      "description": "e.g. data.results"
+    },
+    {
+      "key": "splitBy",
+      "label": "Split Text By",
+      "type": "select",
+      "options": [
+        { "label": "Lines", "value": "line" },
+        { "label": "Words", "value": "word" },
+        { "label": "Custom Marker", "value": "custom" }
+      ],
+      "default": "line",
+      "description": "Only used for Text loop type"
+    },
+    {
+      "key": "customMarker",
+      "label": "Custom Marker",
+      "type": "text",
+      "default": "",
+      "description": "Character or string to split text by"
+    },
+    {
+      "key": "iterationsCount",
+      "label": "Number of Times",
+      "type": "number",
+      "default": 1,
+      "description": "Only used for Counter loop type"
+    }
+  ]
+}

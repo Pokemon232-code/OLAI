@@ -1,0 +1,65 @@
+{
+    "id": "ai.image-generation",
+    "name": "Image Generation",
+    "category": "AI",
+    "icon": "🎨",
+    "description": "Generate images using ChatGPT or Gemini with text prompts and optional reference images.",
+    "inputs": [
+        {
+            "name": "input",
+            "type": "any",
+            "required": false,
+            "description": "Trigger/Prompt input from upstream node"
+        },
+        {
+            "name": "files",
+            "type": "document",
+            "required": false,
+            "description": "Reference images from upstream"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "response",
+            "type": "text",
+            "description": "Raw text response from the model"
+        },
+        {
+            "name": "images",
+            "type": "image",
+            "description": "Generated images"
+        },
+        {
+            "name": "json",
+            "type": "json",
+            "description": "Any parsed JSON from the response"
+        }
+    ],
+    "settings": [
+        {
+            "key": "model",
+            "label": "Model",
+            "type": "select",
+            "default": "chatgpt",
+            "description": "Which AI model to use for image generation",
+            "options": [
+                {
+                    "label": "ChatGPT",
+                    "value": "chatgpt"
+                },
+                {
+                    "label": "Gemini",
+                    "value": "gemini"
+                }
+            ]
+        },
+        {
+            "key": "prompt",
+            "label": "Prompt",
+            "type": "textarea",
+            "default": "",
+            "placeholder": "Describe the image you want to generate...",
+            "description": "The text prompt describing the image to generate."
+        }
+    ]
+}

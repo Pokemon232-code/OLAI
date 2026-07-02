@@ -1,0 +1,36 @@
+{
+  "id": "logic.if-else",
+  "name": "If / Else",
+  "category": "Processing",
+  "icon": "⚖️",
+  "description": "Branch the workflow based on a JavaScript condition",
+  "inputs": [
+    {
+      "name": "input",
+      "type": "any",
+      "description": "Data to evaluate and forward"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "true",
+      "type": "any",
+      "description": "Forwarded input when condition is met"
+    },
+    {
+      "name": "false",
+      "type": "any",
+      "description": "Forwarded input when condition is not met"
+    }
+  ],
+  "settings": [
+    {
+      "key": "condition",
+      "label": "Condition (JS)",
+      "type": "textarea",
+      "default": "input.text && input.text !== 'NO_ALERT'",
+      "description": "A JavaScript expression that returns true or false. You can use 'input.text', 'input.data', or 'input.files'.",
+      "placeholder": "e.g. input.data.price < 200"
+    }
+  ]
+}

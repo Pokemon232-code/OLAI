@@ -1,0 +1,44 @@
+{
+  "id": "processing.csvParser",
+  "name": "CSV Parser",
+  "category": "Processing",
+  "icon": "📊",
+  "description": "Extract and filter data from CSV or Excel files.",
+  "inputs": [
+    {
+      "name": "input",
+      "type": "any",
+      "description": "File to parse"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "type": "any",
+      "description": "Extracted JSON data"
+    }
+  ],
+  "settings": [
+    {
+      "key": "selectedHeaders",
+      "label": "Required Headers",
+      "type": "text",
+      "default": "",
+      "description": "Comma-separated list of columns to keep (leave empty for all)"
+    },
+    {
+      "key": "rowFilter",
+      "label": "Row Filter",
+      "type": "text",
+      "default": "",
+      "description": "Text to search for (case-insensitive)"
+    },
+    {
+      "key": "filterColumn",
+      "label": "Filter in Column",
+      "type": "text",
+      "default": "",
+      "description": "Which column to check (leave empty for all)"
+    }
+  ]
+}

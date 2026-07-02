@@ -1,0 +1,30 @@
+{
+  "id": "tools.weather",
+  "name": "Weather Lookup",
+  "category": "Tools",
+  "icon": "🌤️",
+  "description": "Get current weather for any city using wttr.in (no API key needed)",
+  "handlerType": "browser",
+  "url": "https://wttr.in",
+  "actions": [
+    {
+      "value": "current",
+      "label": "Current Weather",
+      "fields": ["city", "units"],
+      "description": "Get current temperature and conditions"
+    },
+    {
+      "value": "forecast",
+      "label": "3-Day Forecast",
+      "fields": ["city", "units"],
+      "description": "Get a 3-day weather forecast"
+    }
+  ],
+  "fields": [
+    { "key": "city", "label": "City", "type": "text", "default": "Mumbai", "placeholder": "Enter city name" },
+    { "key": "units", "label": "Units", "type": "select", "default": "metric", "options": [
+      { "label": "Metric (°C)", "value": "metric" },
+      { "label": "Imperial (°F)", "value": "imperial" }
+    ]}
+  ]
+}

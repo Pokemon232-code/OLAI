@@ -1,0 +1,54 @@
+{
+    "id": "ai.claude",
+    "name": "Claude",
+    "category": "AI",
+    "icon": "🤖",
+    "description": "Interact with Claude for chat completions with multi-modal support.",
+    "inputs": [
+        {
+            "name": "trigger",
+            "type": "any",
+            "required": false,
+            "description": "Trigger execution from upstream"
+        },
+        {
+            "name": "prompt",
+            "type": "text",
+            "required": false,
+            "description": "Dynamic prompt input"
+        },
+        {
+            "name": "files",
+            "type": "document",
+            "required": false,
+            "description": "Dynamic file inputs"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "response",
+            "type": "text",
+            "description": "The raw text response from Claude"
+        },
+        {
+            "name": "json",
+            "type": "json",
+            "description": "Parsed JSON object if output contains a markdown JSON block"
+        },
+        {
+            "name": "images",
+            "type": "image",
+            "description": "Array of images extracted from response"
+        }
+    ],
+    "settings": [
+        {
+            "key": "prompt",
+            "label": "Prompt",
+            "type": "textarea",
+            "default": "",
+            "placeholder": "Ask Claude something...",
+            "description": "The text prompt to send to the Claude model."
+        }
+    ]
+}

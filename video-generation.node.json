@@ -1,0 +1,48 @@
+{
+    "id": "ai.video-generation",
+    "name": "Video Generation",
+    "category": "AI",
+    "icon": "🎬",
+    "description": "Generate videos using Gemini (Veo) with text prompts and optional reference images.",
+    "inputs": [
+        {
+            "name": "input",
+            "type": "any",
+            "required": false,
+            "description": "Trigger/Prompt input from upstream node"
+        },
+        {
+            "name": "files",
+            "type": "document",
+            "required": false,
+            "description": "Reference images from upstream for video generation"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "response",
+            "type": "text",
+            "description": "Raw text response from the model"
+        },
+        {
+            "name": "videos",
+            "type": "video",
+            "description": "Generated videos"
+        },
+        {
+            "name": "json",
+            "type": "json",
+            "description": "Any parsed JSON from the response"
+        }
+    ],
+    "settings": [
+        {
+            "key": "prompt",
+            "label": "Prompt",
+            "type": "textarea",
+            "default": "",
+            "placeholder": "Describe the video you want to generate...",
+            "description": "The text prompt describing the video to generate."
+        }
+    ]
+}

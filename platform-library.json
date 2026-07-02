@@ -1,0 +1,145 @@
+[
+  {
+    "id": "finance.zerodha",
+    "name": "Zerodha Kite",
+    "category": "Tools",
+    "icon": "📈",
+    "description": "Monitor stocks and manage orders on Zerodha Kite (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://kite.zerodha.com",
+    "actions": [
+      { "value": "check_portfolio", "label": "Check Portfolio", "fields": ["account_id"], "description": "View current holdings and P&L" },
+      { "value": "get_quote", "label": "Get Stock Quote", "fields": ["symbol"], "description": "Fetch real-time price for a specific symbol" },
+      { "value": "place_order", "label": "Place Order", "fields": ["symbol", "quantity", "order_type"], "description": "Place a buy/sell order via browser automation" }
+    ],
+    "fields": [
+      { "key": "account_id", "label": "User ID", "type": "text", "placeholder": "Your Zerodha ID" },
+      { "key": "symbol", "label": "Stock Symbol", "type": "text", "placeholder": "e.g. RELIANCE" },
+      { "key": "quantity", "label": "Quantity", "type": "number", "default": 1 },
+      { "key": "order_type", "label": "Order Type", "type": "select", "default": "BUY", "options": [
+        { "label": "BUY", "value": "BUY" },
+        { "label": "SELL", "value": "SELL" }
+      ]}
+    ]
+  },
+  {
+    "id": "communication.whatsapp",
+    "name": "WhatsApp Business",
+    "category": "Tools",
+    "icon": "💬",
+    "description": "Send and receive messages via WhatsApp Web (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://web.whatsapp.com",
+    "actions": [
+      { "value": "send_message", "label": "Send Message", "fields": ["phone", "message"], "description": "Send a text message to a specific number" },
+      { "value": "get_unread", "label": "Read Unread", "fields": [], "description": "Fetch all unread messages from the chat list" }
+    ],
+    "fields": [
+      { "key": "phone", "label": "Phone Number", "type": "text", "placeholder": "+91 9999999999" },
+      { "key": "message", "label": "Message Content", "type": "textarea", "placeholder": "Type your message..." }
+    ]
+  },
+  {
+    "id": "communication.gmail",
+    "name": "Gmail Automation",
+    "category": "Tools",
+    "icon": "📧",
+    "description": "Manage emails using the Gmail web interface (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://mail.google.com",
+    "actions": [
+      { "value": "send_email", "label": "Send Email", "fields": ["to", "subject", "body"], "description": "Compose and send a new email" },
+      { "value": "search_emails", "label": "Search Inbox", "fields": ["query"], "description": "Search for specific emails using keywords" }
+    ],
+    "fields": [
+      { "key": "to", "label": "To", "type": "text", "placeholder": "recipient@gmail.com" },
+      { "key": "subject", "label": "Subject", "type": "text", "placeholder": "Enter subject" },
+      { "key": "body", "label": "Message Body", "type": "textarea", "placeholder": "Email content..." },
+      { "key": "query", "label": "Search Query", "type": "text", "placeholder": "from:example@gmail.com" }
+    ]
+  },
+  {
+    "id": "development.github",
+    "name": "GitHub Actions",
+    "category": "Tools",
+    "icon": "🐙",
+    "description": "Interact with GitHub repositories and issues.",
+    "handlerType": "browser",
+    "url": "https://github.com",
+    "actions": [
+      { "value": "list_repos", "label": "List Repositories", "fields": ["username"], "description": "Show all public repositories for a user" },
+      { "value": "get_issues", "label": "Get Issues", "fields": ["repo"], "description": "Fetch open issues for a specific repository" }
+    ],
+    "fields": [
+      { "key": "username", "label": "Username", "type": "text", "placeholder": "github-username" },
+      { "key": "repo", "label": "Repository", "type": "text", "placeholder": "owner/repo-name" }
+    ]
+  },
+  {
+    "id": "marketing.twitter",
+    "name": "Twitter / X",
+    "category": "Tools",
+    "icon": "🐦",
+    "description": "Automate posts and monitor trends on X (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://twitter.com",
+    "actions": [
+      { "value": "post_tweet", "label": "Post Tweet", "fields": ["text"], "description": "Post a new status update" },
+      { "value": "get_trends", "label": "Explore Trends", "fields": [], "description": "Fetch top trending topics" }
+    ],
+    "fields": [
+      { "key": "text", "label": "Tweet Text", "type": "textarea", "placeholder": "What's happening?" }
+    ]
+  },
+  {
+    "id": "productivity.notion",
+    "name": "Notion Workspace",
+    "category": "Tools",
+    "icon": "📝",
+    "description": "Create pages and update databases in Notion (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://notion.so",
+    "actions": [
+      { "value": "create_page", "label": "Create Page", "fields": ["title", "content"], "description": "Add a new page to your workspace" },
+      { "value": "update_db", "label": "Update Database", "fields": ["db_url", "data"], "description": "Add a row to a Notion database" }
+    ],
+    "fields": [
+      { "key": "title", "label": "Page Title", "type": "text", "placeholder": "New Page Title" },
+      { "key": "content", "label": "Page Content", "type": "textarea", "placeholder": "Enter page body..." },
+      { "key": "db_url", "label": "Database URL", "type": "text", "placeholder": "Paste notion DB link" }
+    ]
+  },
+  {
+    "id": "communication.slack",
+    "name": "Slack Messenger",
+    "category": "Tools",
+    "icon": "Slack",
+    "description": "Send messages to Slack channels via web (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://slack.com",
+    "actions": [
+      { "value": "post_message", "label": "Post to Channel", "fields": ["channel", "text"], "description": "Send a message to a public or private channel" }
+    ],
+    "fields": [
+      { "key": "channel", "label": "Channel Name", "type": "text", "placeholder": "#general" },
+      { "key": "text", "label": "Message", "type": "textarea", "placeholder": "Hello Slack!" }
+    ]
+  },
+  {
+    "id": "marketing.linkedin",
+    "name": "LinkedIn Pro",
+    "category": "Tools",
+    "icon": "👔",
+    "description": "Manage professional posts and networking on LinkedIn (No-API mode).",
+    "handlerType": "browser",
+    "url": "https://linkedin.com",
+    "actions": [
+      { "value": "post_update", "label": "Post Update", "fields": ["text"], "description": "Share a professional update or article" },
+      { "value": "search_people", "label": "Search People", "fields": ["query"], "description": "Find profiles based on keywords" }
+    ],
+    "fields": [
+      { "key": "text", "label": "Post Content", "type": "textarea", "placeholder": "Share an update..." },
+      { "key": "query", "label": "Search Keywords", "type": "text", "placeholder": "e.g. Software Engineer" }
+    ]
+  }
+]

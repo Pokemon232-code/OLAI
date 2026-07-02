@@ -1,0 +1,62 @@
+{
+    "id": "ai.chatgpt",
+    "name": "ChatGPT",
+    "category": "AI",
+    "icon": "🤖",
+    "description": "Interact with ChatGPT features like Reasoning (Thinking), Deep Research, and Web Search.",
+    "inputs": [
+        {
+            "name": "input",
+            "type": "any",
+            "required": false,
+            "description": "Upstream prompt or file trigger"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "response",
+            "type": "text",
+            "description": "The raw text response from ChatGPT"
+        },
+        {
+            "name": "json",
+            "type": "json",
+            "description": "Parsed JSON object if output contains a markdown JSON block"
+        }
+    ],
+    "settings": [
+        {
+            "key": "action",
+            "label": "Action",
+            "type": "select",
+            "default": "chat",
+            "options": [
+                {
+                    "label": "Chat",
+                    "value": "chat"
+                },
+                {
+                    "label": "Reasoning (Thinking)",
+                    "value": "chat_thinking"
+                },
+                {
+                    "label": "Deep Research",
+                    "value": "chat_deep_research"
+                },
+                {
+                    "label": "Web Search",
+                    "value": "chat_web_search"
+                }
+            ],
+            "description": "The ChatGPT feature to use."
+        },
+        {
+            "key": "prompt",
+            "label": "Prompt",
+            "type": "textarea",
+            "default": "",
+            "placeholder": "Ask ChatGPT something...",
+            "description": "The text prompt to send."
+        }
+    ]
+}
